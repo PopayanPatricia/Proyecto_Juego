@@ -11,10 +11,12 @@ if (isset($_POST['Guardar'])){
   $categoria = $_POST['categoria'];
   $caracteristicas = $_POST['caracteristicas'];
   $consola = $_POST['consola'];
-  $añoLanzamiento = $_POST['consola'];
+  $añoLanzamiento = $_POST['añoLanzamiento'];
+  $imagen = addslashes(file_get_contents($_FILES["imagen"]["tmp_name"]));
 
-  $query = "INSERT INTO juegos_lista(nombre, categoria, caracteristicas, consola, lanzamiento) VALUES ('$nombre', '$categoria',
-    '$caracteristicas', '$consola', '$añoLanzamiento')";
+  $query = "INSERT INTO juegos_lista(nombre, categoria, caracteristicas, consola, añolanzamiento, imagen) 
+    VALUES ('$nombre', '$categoria', '$caracteristicas', '$consola', '$añoLanzamiento', '$imagen')";
+  //$query = "SELECT DATE_FORMAT(añoLanzamiento, '%D-%M-%Y') FROM juegos_lista";
   $resultado = mysqli_query($conn, $query);
 
   if(!$resultado){

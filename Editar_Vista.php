@@ -49,6 +49,7 @@
               <th>Caracteristicas</th>
               <th>Consola</th>
               <th>Lanzamiento</th>
+              <th>Imagen</th>
               <th>Acción</th>
             </tr>
           </thead>
@@ -65,6 +66,7 @@
                         <td> <?php echo $row['caracteristicas'] ?> </td>
                         <td> <?php echo $row['consola'] ?> </td>
                         <td> <?php echo $row['añoLanzamiento'] ?> </td>
+                        <td><img height="30px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']) ?>"></td>
                         <td>
                           <a href="Editar.php?idJuegos=<?php echo $row['idJuegos']?>" class="btn btn-info">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-pencil-fill" viewBox="0 0 16 16">

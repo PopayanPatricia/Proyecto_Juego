@@ -13,7 +13,7 @@
         <div class="container">
             <a href="index.php" class="navbar-brand">REGISTRAR NUEVOS JUEGOS</a>
         </div>
-    </nav>
+  </nav>
 
   <style> 
     body {background: ("FondoAdd.jpg" );
@@ -41,7 +41,7 @@
             </div>
             <?php session_unset(); } ?>
             <div class="card card-body">
-                <form action="Guardar.php" method="POST">
+                <form action="Guardar.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-3">
                         <input type="text" name="nombre" class="form-control"
                         placeholder="Nombre" autofocus>
@@ -59,8 +59,13 @@
                         placeholder="Consola" autofocus>
                     </div>
                     <div class="form-group mb-3">
-                        <input type="text" name="añoLanzamiento" class="form-control"
-                        placeholder="Lanzamiento" autofocus>
+                      <input type='date' name="añoLanzamiento" class="entradaForm" placeholder="añoLanzamiento">
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="file" name="imagen" required="">
                     </div>
                     <input type="submit" class="btn btn-success btn-block"
                         name="Guardar" value="Guardar">
@@ -77,6 +82,7 @@
                 <th>Caracteristicas</th>
                 <th>Consola</th>
                 <th>Lanzamiento</th>
+                <th>Imagen</th>
               </tr>
             </thead>
             <tbody>
@@ -92,6 +98,7 @@
                           <td> <?php echo $row['caracteristicas'] ?> </td>
                           <td> <?php echo $row['consola'] ?> </td>
                           <td> <?php echo $row['añoLanzamiento'] ?> </td>
+                          <td><img height="30px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']) ?>"></td>
                         </tr>
                 <?php } ?>
             </tbody>

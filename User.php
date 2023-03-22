@@ -22,7 +22,7 @@
     }
   </style>
 
-  <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
+  <a href="Profile.php"><img src="Img/Back22.png" width="15%" height="11%"
     style="position: fixed; top: 50%; left: 50%; transform: translate(-250%, 250%)"> 
   </a>
 
@@ -40,6 +40,7 @@
               <th>Caracteristicas</th>
               <th>Consola</th>
               <th>Lanzamiento</th>
+              <th>Imagen</th>
             </tr>
           </thead>
           <tbody>
@@ -55,6 +56,7 @@
                         <td> <?php echo $row['caracteristicas'] ?> </td>
                         <td> <?php echo $row['consola'] ?> </td>
                         <td> <?php echo $row['añoLanzamiento'] ?> </td>
+                        <td><img height="30px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']) ?>"></td>
                       </tr>
               <?php } ?>
           </tbody>

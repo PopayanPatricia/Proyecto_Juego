@@ -39,6 +39,7 @@
               <th>Caracteristicas</th>
               <th>Consola</th>
               <th>Lanzamiento</th>
+              <th>Imagen</th>
             </tr>
           </thead>
           <tbody>
@@ -54,6 +55,7 @@
                         <td> <?php echo $row['caracteristicas'] ?> </td>
                         <td> <?php echo $row['consola'] ?> </td>
                         <td> <?php echo $row['añoLanzamiento'] ?> </td>
+                        <td><img height="30px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']) ?>"></td>
                       </tr>
               <?php } ?>
           </tbody>
