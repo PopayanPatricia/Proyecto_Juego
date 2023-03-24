@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VideoJuegos</title>
+  <title>Profile</title>
 </head>
 
 <body background="Img/Background2Update.png" background-size="cover">
@@ -20,7 +20,7 @@
   </a>
 
 
-  <a href="User.php"><img src="Img/ButtonUs.png" width="-90%" height="50%"
+  <a href="Profile_User.php"><img src="Img/ButtonUs.png" width="-90%" height="50%"
     style="position: fixed; top: 65%; left: 50%; transform: translate(32%, -50%)">
   </a>
 

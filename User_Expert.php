@@ -4,32 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VideoJuegos</title>
+  <title>Expert</title>
 </head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-<body background="Img/FondoRead.jpg" background-size="cover"> 
+<body background="Img/User1.gif" background-size="cover"> 
 
   <nav class="navbar navbar-dark bg-danger">
     <div class="container">
-        <a href="index.php" class="navbar-brand">LISTADO DE JUEGOS</a>
+        <a href="index.php" class="navbar-brand">LIST OF GAMES FOR EXPERTS</a>
     </div>
   </nav>
 
   <style> 
-    body {background: ("FondoRead.jpg" );
+    body {background: ("User1.gif" );
     background-size: cover;
     }
   </style>
 
-  <a href="Profile.php"><img src="Img/Back22.png" width="15%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(-250%, 250%)"> 
+  <a href="Profile_User.php"><img src="Img/Back22.png" width="15%" height="11%"
+    style="position: fixed; top: 50%; left: 50%; transform: translate(220%, 90%)"> 
   </a>
 
   <?php include("base_datos.php") ?>
 
   <div class="container p-4">
-   <div class="row">   
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>
+  </div>
+  <div class="container p-4">
+   <div class="row">
+    <div class="col-md-2"></div>   
       <div class="col-md-8">
         <table class="table table-bordered border-primary table-hover">
           <thead>
