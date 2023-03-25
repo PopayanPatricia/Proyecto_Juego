@@ -22,9 +22,9 @@
     }  
   </style>
 
-  <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(220%, -250%)"> 
-  </a>    
+<a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
+    style="position: absolute; top: 10%; left: 0%;"> 
+  </a> 
 
   <?php 
     session_start();
