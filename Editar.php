@@ -1,12 +1,14 @@
 <?php 
-
+//Llamada a la base de datos
   session_start();
   include("base_datos.php");
 
+  //Validar si existe el idJuego 
   if (isset($_GET['idJuegos'])) {
     $idJuegos = $_GET['idJuegos'];
-    $query = "SELECT * FROM juegos_lista WHERE idJuegos = $idJuegos";
+    $query = "SELECT * FROM juegos_lista WHERE idJuegos = $idJuegos"; //Consulta a la BD tabla juegos
     $result_editar = mysqli_query($conn, $query);
+    //Consultar el resultado
     if (mysqli_num_rows($result_editar) == true) {
       $row = mysqli_fetch_array($result_editar);
       $nombre = $row['nombre'];
@@ -18,6 +20,7 @@
     }
   }
 
+  //Validar si existe una accion del boton actualizar por el metodo POST
   if (isset($_POST['actualizar'])) {
     $idJuegos = $_GET['idJuegos'];
     $nombre = $_POST['nombre'];
@@ -27,12 +30,13 @@
     $añoLanzamiento= $_POST['añoLanzamiento'];
     $imagen = addslashes(file_get_contents($_FILES["imagen"]["tmp_name"]));
 
+    //Consulta a la BD tabla juegos
     $query = "UPDATE juegos_lista set nombre = '$nombre', categoria ='$categoria', 
       caracteristicas = '$caracteristicas', consola ='$consola', añoLanzamiento = '$añoLanzamiento',
       imagen = '$imagen' WHERE idJuegos = $idJuegos";
-    //$query = "SELECT DATE_FORMAT(añoLanzamiento, '%D-%M-%Y') FROM juegos_lista";
     $result_edita = mysqli_query($conn, $query);
 
+    //almacenar mensaje
     $_SESSION['message'] = 'Juego actualizado';
     $_SESSION['message_type'] = 'primary';
     header("Location: Editar_Vista.php");
@@ -40,8 +44,8 @@
 
 ?>
 
-<?php include("Includes/Header.php") ?>
-
+<?php 
+include("Includes/Header.php") ?>
 
   <div class="container p-4">
     <div class="row">

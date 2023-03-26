@@ -25,8 +25,8 @@
   <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
     style="position: fixed; top: 50%; left: 50%; transform: translate(220%, -250%)"> 
   </a>    
-
-  <?php 
+ 
+  <?php  //Llamada a la base de datos
     session_start();
     include("base_datos.php") 
   ?>
@@ -54,7 +54,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php 
+            <?php //Consulta a la BD tabla juegos_lista para listar los datos en la tabla de la interfaz de administrador Borrar_Vista
               $query = "SELECT * FROM juegos_lista";
               $result_juegos = mysqli_query($conn, $query);
 

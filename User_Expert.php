@@ -25,8 +25,9 @@
   <a href="Profile_User.php"><img src="Img/Back22.png" width="15%" height="11%"
     style="position: fixed; top: 50%; left: 50%; transform: translate(220%, 90%)"> 
   </a>
-
-  <?php include("base_datos.php") ?>
+  
+  <?php //Llamada a la base de datos
+  include("base_datos.php") ?>
 
   <div class="container p-4">
     <div class="row">
@@ -51,7 +52,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php 
+            <?php //Consulta a la BD tabla juegos_lista para listar los datos en la tabla de la interfaz de user_expert
                 $query = "SELECT * FROM juegos_lista";
                 $result_juegos = mysqli_query($conn, $query);
 

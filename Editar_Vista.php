@@ -25,7 +25,7 @@
   <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
     style="position: fixed; top: 50%; left: 50%; transform: translate(220%, -250%)"> 
   </a>
-
+  <!--Llamada a la base de datos-->
   <?php
     session_start();
     include("base_datos.php");
@@ -34,7 +34,8 @@
   <div class="container p-4">
     <div class="row">   
       <div class="col-md-8">
-        <?php if(isset($_SESSION['message'])){ ?>
+        <?php //Validar datos del mesaje SESSION
+        if(isset($_SESSION['message'])){ ?>
             <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert">
               <?= $_SESSION['message']  ?>
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -54,7 +55,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php 
+            <?php //Consulta a la BD tabla juegos_lista para listar los datos en la tabla de la interfaz de adminitrador Editar_vista
                 $query = "SELECT * FROM juegos_lista";
                 $result_juegos = mysqli_query($conn, $query);
 
@@ -66,7 +67,7 @@
                         <td> <?php echo $row['caracteristicas'] ?> </td>
                         <td> <?php echo $row['consola'] ?> </td>
                         <td> <?php echo $row['añoLanzamiento'] ?> </td>
-                        <td><img height="30px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']) ?>"></td>
+                        <td><img class="display:none" height="30px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']) ?>"></td>
                         <td>
                           <a href="Editar.php?idJuegos=<?php echo $row['idJuegos']?>" class="btn btn-info">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-pencil-fill" viewBox="0 0 16 16">
