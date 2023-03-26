@@ -1,6 +1,6 @@
 <?php
 
-//conexion a la base de datos
+//conexion a la BD
 $conn = mysqli_connect(
     'localhost',
     'root',
