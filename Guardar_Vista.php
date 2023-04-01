@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    table {font-family: Roboto, sans-serif;
+      font-size: 14px;
+      color: while;
+      }
+  </style>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +15,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <body background="Img/FondoAdd.jpg" background-size="cover">
  
-  <nav class="navbar navbar-dark bg-danger">
+  <nav class="navbar navbar-dark bg-primary" style="width: 100%;">
         <div class="container">
-            <a href="index.php" class="navbar-brand">REGISTER NEW GAME</a>
+             <a href="index.php" class="navbar-brand mx-auto"> REGISTER NEW GAME</a>
         </div>
   </nav>
 
@@ -29,8 +35,8 @@
   <div class="container p-4">
     <div class="row">
       <div class="col-md-12">
-          <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
-            style="position: fixed; top: 50%; left: 50%; transform: translate(150%, -355%)"> 
+          <a href="Admin.php"><img src="Img/Back24.png" width="8%" height="7%"
+          style="position: absolute; top: 10%; left: 5%;"> 
           </a>
       </div>
     </div>
@@ -78,9 +84,16 @@
             </div>
         </div>
         <div class="col-md-8">
-          <table class="table table-bordered border-primary table-hover">
+          <table class="position: fixed; top: 200px; left: 200px;">
+          
+            <style>
+              th{text-align: center;
+              color: White;
+
+            }
+              </style>
             <thead>
-              <tr bgcolor="aqua">
+              <tr bgcolor="#8E68E6">
                 <th>IdJuego</th>
                 <th>Nombre</th>
                 <th>Categoria</th>

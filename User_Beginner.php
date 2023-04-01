@@ -10,9 +10,9 @@
 
 <body background="Img/User1.gif" background-size="cover"> 
 
-  <nav class="navbar navbar-dark bg-danger" height="5">
+  <nav class="navbar navbar-dark bg-secondary" style="width: 100%;">
     <div class="container" >
-        <a href="index.php" class="navbar-brand">LIST GAME FOR BEGINNER</a>
+        <a href="index.php" class="navbar-brand mx-auto">LIST GAME FOR BEGINNER</a>
     </div>
   </nav>
 
@@ -22,8 +22,8 @@
     }
   </style>
 
-  <a href="Profile_User.php"><img src="Img/Back22.png" width="15%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(220%, 90%)"> 
+  <a href="Profile_User.php"><img src="Img/Back24.png" width="10%" height="8%"
+    style="position: fixed; top: 25%; left: 3%; "> 
   </a>
   
   <?php //Llamada a la base de datos
@@ -40,7 +40,14 @@
    <div class="row">
     <div class="col-md-2"></div>   
       <div class="col-md-8">
-        <table class="table table-bordered border-primary table-hover">
+                  <style>
+table {
+  margin: auto;
+}
+</style>
+
+       <table class="table table-bordered  border-primary table-hover position">
+        
           <thead>
             <tr bgcolor="aqua">
               <th>IdJuego</th>

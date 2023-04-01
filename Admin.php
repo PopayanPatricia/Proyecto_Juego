@@ -15,24 +15,24 @@
     }
   </style>
 
-  <a href="Guardar_Vista.php"><img src="Img/Add.png" width="-45%" height="15%"
-    style="position: fixed; top: 60%; left: 50%; transform: translate(-250%, -250%)">
+  <a href="Guardar_Vista.php"><img src="Img/Add.png" width="-10%" height="12%"
+    style="position: fixed; top: 40%; left: 45%; transform: translate(-175%, -250%)">
   </a>
 
-  <a href="Lista.php"><img src="Img/Read.png" width="-20%" height="12%"
+  <a href="Lista.php"><img src="Img/Read.png" width="-10%" height="12%"
     style="position: absolute; top: 50%; left: 50%; transform: translate(-130%, -210%)">
   </a>
 
-  <a href="Editar_Vista.php"><img src="Img/Update.png" width="-18%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(-20%, -230%)"> 
+  <a href="Editar_Vista.php"><img src="Img/Update.png" width="-10%" height="12%"
+    style="position: fixed; top: 50%; left: 50%; transform: translate(-20%, -320%)"> 
   </a>
 
-  <a href="Borrar_Vista.php"><img src="Img/Delete.png" width="-20%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(130%, -230%)"> 
+  <a href="Borrar_Vista.php"><img src="Img/Delete.png" width="-10%" height="12%"
+    style="position: fixed; top: 50%; left: 50%; transform: translate(80%, -200%)"> 
   </a>
 
   <a href="Profile.php"><img src="Img/Back.png" width="15%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(-5%, 250%)"> 
+    style="position: fixed; top: 50%; left: 50%; transform: translate(-10%, 240%)"> 
   </a>
 
 </body>

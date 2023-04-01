@@ -10,9 +10,9 @@
 
 <body background="Img/FondoAdd.jpg" background-size="cover"> 
 
-  <nav class="navbar navbar-dark red bg-danger">
+  <nav class="navbar navbar-dark red bg-danger" style="width: 100%;">
     <div class="container">
-        <a href="index.php" class="navbar-brand">UPDATE GAMES</a>
+        <a href="index.php" class="navbar-brand mx-auto">UPDATE GAMES</a>
     </div>
   </nav>
 
@@ -22,8 +22,9 @@
     }
   </style>
 
+  
   <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(220%, -250%)"> 
+    style="position: absolute; top: 10%; left: 0%;"> 
   </a>
   <!--Llamada a la base de datos-->
   <?php

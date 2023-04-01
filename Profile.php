@@ -15,13 +15,13 @@
     } 
   </style>
 
-  <a href="Admin.php"><img src="Img/ButtonAd1.png" width="-90%" height="50%"
-    style="position: fixed; top: 65%; left: 40%; transform: translate(-120%, -50%)">
+  <a href="Admin.php"><img src="Img/ButtonAd1.png" width="-110%" height="50%"
+    style="position: fixed; top: 65%; left: 40%; transform: translate(-150%, -55%)">
   </a>
 
 
   <a href="Profile_User.php"><img src="Img/ButtonUs.png" width="-90%" height="50%"
-    style="position: fixed; top: 65%; left: 50%; transform: translate(32%, -50%)">
+    style="position: fixed; top: 65%; left: 50%; transform: translate(32%, -55%)">
   </a>
 
   <a href="Index.php"><img src="Img/Back21.png" width="7%" height="6%"
