@@ -84,14 +84,12 @@
             </div>
         </div>
         <div class="col-md-8">
-          <table class="position: fixed; top: 200px; left: 200px;">
-          
+          <table class="table table-bordered border-primary table-hover">
             <style>
               th{text-align: center;
               color: White;
-
             }
-              </style>
+            </style>
             <thead>
               <tr bgcolor="#8E68E6">
                 <th>IdJuego</th>

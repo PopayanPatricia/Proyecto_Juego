@@ -40,11 +40,11 @@
    <div class="row">
     <div class="col-md-2"></div>   
       <div class="col-md-8">
-                  <style>
-table {
-  margin: auto;
-}
-</style>
+        <style>
+          table {
+            margin: auto;
+          }
+        </style>
 
        <table class="table table-bordered  border-primary table-hover position">
         

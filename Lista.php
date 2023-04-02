@@ -29,7 +29,7 @@
   </style>
 
   <a href="Admin.php"><img src="Img/Back22.png" width="15%" height="11%"
-    style="position: absolute; top: 80%; left: 10%;"> 
+    style="position: fixed; top: 50%; left: 50%; transform: translate(220%, 200%)"> 
   </a>
   
   <?php //Llamada a la base de datos
@@ -40,12 +40,11 @@
       <div class="col-md-8">
         <table class="table table-bordered  border-primary table-hover position: fixed; top: 200px; left: 200px;">
         
-        <style>
+          <style>
               th{text-align: center;
               color: blue;
-
             }
-              </style>
+          </style>
           <thead>
             <tr bgcolor="aqua">
               <th>IdJuego</th>
