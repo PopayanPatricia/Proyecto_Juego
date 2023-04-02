@@ -76,7 +76,7 @@ include("Includes/Header.php") ?>
                 </span>
             </div>
             <div class="form-group mb-3">
-                <input type="file" name="imagen" required="" value="<?php echo $imagen; ?>">
+                <input type="file" name="imagen" required="" value= "">
             </div>
             <button type="submit" class="btn btn-success" 
                 name="actualizar"> Actualizar
