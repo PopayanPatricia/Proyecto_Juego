@@ -1,25 +1,112 @@
-<?php include("base_datos.php");
+<?php
+include("base_datos.php");
+
+if (isset($_POST['idJuego'])) {
+    $idJuego = $_POST['idJuego'];
+
+    $buscador = mysqli_query($conn, "SELECT * FROM juegos_lista WHERE idJuegos = $idJuego");
+
+    if (!$buscador) {
+        // Si la consulta falla, imprimir un mensaje de error o tomar alguna otra acción
+        echo "Error al ejecutar la consulta: " . mysqli_error($conn);
+    } else {
+        // Si la consulta se realiza correctamente, obtener el número de filas
+        $numero = mysqli_num_rows($buscador);
+
+        if ($numero == 1) {
+            $resultado = mysqli_fetch_assoc($buscador);
+            $idJuego = $resultado['idJuegos'];
+            $nombre = $resultado['nombre'];
+
+            header("Location: User_Beginner.php?idJuego=$idJuego&nombre=$nombre");
+            exit();
+        } else {
+            echo "<p>No se encontró ningún juego con el ID ingresado.</p>";
+        }
+    }
+} ?>
+
+<?php
+include("base_datos.php");
+
+if (isset($_POST['idJuego'])) {
+    $idJuego = $_POST['idJuego'];
+
+    $buscador = mysqli_query($conn, "SELECT * FROM juegos_lista WHERE idJuegos = $idJuego");
+
+    if (!$buscador) {
+        // Si la consulta falla, imprimir un mensaje de error o tomar alguna otra acción
+        echo "Error al ejecutar la consulta: " . mysqli_error($conn);
+    } else {
+        // Si la consulta se realiza correctamente, obtener el número de filas
+        $numero = mysqli_num_rows($buscador);
+
+        if ($numero == 1) {
+            $resultado = mysqli_fetch_assoc($buscador);
+            $idJuego = $resultado['idJuegos'];
+            $nombre = $resultado['nombre'];
+
+            header("Location: User_Beginner.php?idJuego=$idJuego&nombre=$nombre");
+            exit();
+        } else {
+            echo "<p>No se encontró ningún juego con el ID ingresado.</p>";
+        }
+    }
+} ?>
+
+<?php
+include("base_datos.php");
+
+if (isset($_POST['idJuego'])) {
+    $idJuego = $_POST['idJuego'];
+
+    $buscador = mysqli_query($conn, "SELECT * FROM juegos_lista WHERE idJuegos = $idJuego");
+
+    if (!$buscador) {
+        // Si la consulta falla, imprimir un mensaje de error o tomar alguna otra acción
+        echo "Error al ejecutar la consulta: " . mysqli_error($conn);
+    } else {
+        // Si la consulta se realiza correctamente, obtener el número de filas
+        $numero = mysqli_num_rows($buscador);
+
+        if ($numero == 1) {
+            $resultado = mysqli_fetch_assoc($buscador);
+            $idJuego = $resultado['idJuegos'];
+            $nombre = $resultado['nombre'];
+
+            header("Location: User_Advanced.php?idJuego=$idJuego&nombre=$nombre");
+            exit();
+        } else {
+            echo "<p>No se encontró ningún juego con el ID ingresado.</p>";
+        }
+    }
+} ?>
 
 
+<?php
+include("base_datos.php");
 
-$buscardor=mysqli_query($conn,"SELECT * FROM juegos_lista WHERE nombre LIKE LOWER('%".$_POST["buscar"]."%') OR categoria LIKE LOWER ('%".$_POST["buscar"]."%') "); 
+if (isset($_POST['idJuego'])) {
+    $idJuego = $_POST['idJuego'];
 
-if (!$buscardor) {
-    // Si la consulta falla, imprimir un mensaje de error o tomar alguna otra acción
-    echo "Error al ejecutar la consulta: " . mysqli_error($conn);
-  } else {
-    // Si la consulta se realiza correctamente, obtener el número de filas
-    $numero = mysqli_num_rows($buscardor);
-  } ?>
+    $buscador = mysqli_query($conn, "SELECT * FROM juegos_lista WHERE idJuegos = $idJuego");
 
+    if (!$buscador) {
+        // Si la consulta falla, imprimir un mensaje de error o tomar alguna otra acción
+        echo "Error al ejecutar la consulta: " . mysqli_error($conn);
+    } else {
+        // Si la consulta se realiza correctamente, obtener el número de filas
+        $numero = mysqli_num_rows($buscador);
 
+        if ($numero == 1) {
+            $resultado = mysqli_fetch_assoc($buscador);
+            $idJuego = $resultado['idJuegos'];
+            $nombre = $resultado['nombre'];
 
-
-<h5 class="card-tittle">Resultados encontrados (<?php echo $numero; ?>):</h5>
-
-<?php while($resultado = mysqli_fetch_assoc($buscardor)){ ?>
-
-
-<p class="card-text"><?php echo $resultado["nombre"]; ?> - <?php echo $resultado["categoria"] ?> <br><b> <?php echo "¿Buscabas este juego?" ?> </b> </br> </p>
-
-<?php } ?>
+            header("Location: User_Expert.php?idJuego=$idJuego&nombre=$nombre");
+            exit();
+        } else {
+            echo "<p>No se encontró ningún juego con el ID ingresado.</p>";
+        }
+    }
+} ?>

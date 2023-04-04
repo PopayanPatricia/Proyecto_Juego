@@ -23,36 +23,11 @@
   </style>
 
   <a href="Profile_User.php"><img src="Img/Back24.png" width="10%" height="8%"
-    style="position: fixed; top: 50%; left: 50%; transform: translate(300%, 250%)"> 
+    style="position: fixed; top: 50%; left: 50%; transform: translate(350%, 150%)"> 
   </a>
   
   <?php //Llamada a la base de datos
   include("base_datos.php") ?>
-
-   <!-- buscador -->
-
-<div class="container mt-5">
-    <div class="col-12">
-
-        <div class="mb-3">
-
-            <label class="form-label">Palabra a buscar</label>
-            <input type="text" class="form-control" id="buscar" name="buscar">
-
-            <!--<label class="form-label">Palabra a buscar instantaneo</label>
-            <input onkeyup="buscar_ahora($('#buscar_1').val());" type="text" class="form-control" id="buscar_1" name="buscar_1">
-  -->
-        </div>
-        <button  class="btn btn-primary" onclick="buscar_ahora($('#buscar').val());">Buscar</button>
-
-        <div class="card col-12 mt-5">
-            <div class="card-body">
-                <div id="datos_buscador" class="container pl-5 pr-5"></div>
-            </div>
-        </div>
-        
-    </div>
-</div>
 
   <div class="container p-4">
     <div class="row">
@@ -60,18 +35,33 @@
       </div>
     </div>
   </div>
-  <div class="container p-4">
-   <div class="row">
-    <div class="col-md-2"></div>   
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-2">
+      <h6 style="color: white">Buscador por ID de Juego</h6>
+      <form action="Buscador.php" method="POST">
+          <div class="form-group">
+              <label for="idJuego" style="color: white">ID de Juego:</label>
+              <input type="number" class="form-control" id="idJuego" name="idJuego" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2 mb-2">Buscar</button>
+      </form>
+      <div id="resultado" style="background-color: #f2f2f2; border-radius: 10px; padding: 10px;">
+          <?php
+          if (isset($_GET['idJuego']) && isset($_GET['nombre'])) {
+              echo "<p>ID de Juego: {$_GET['idJuego']}</p>";
+              echo "<p>Nombre: {$_GET['nombre']}</p>";
+          }
+          ?>
+      </div> 
+    </div>     
       <div class="col-md-8">
         <style>
-          table {
-            margin: auto;
-          }
-        </style>
-
-       <table class="table table-bordered  border-primary table-hover position">
-        
+            table {
+              margin: auto;
+            }
+          </style>
+        <table class="table table-bordered border-primary table-hover">
           <thead>
             <tr bgcolor="aqua">
               <th>IdJuego</th>
@@ -84,7 +74,7 @@
             </tr>
           </thead>
           <tbody>
-            <?php //Consulta a la BD tabla juegos_lista para listar los datos en la tabla de la interfaz de user_advanced
+            <?php //Consulta a la BD tabla juegos_lista para listar los datos de la interfaz de user_beginner
                 $query = "SELECT * FROM juegos_lista";
                 $result_juegos = mysqli_query($conn, $query);
 
@@ -104,26 +94,11 @@
       </div>
     </div>
   </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">
-        function buscar_ahora(buscar) {
-        var parametros = {"buscar":buscar};
-        $.ajax({
-        data:parametros,
-        type: 'POST',
-        url: 'Buscador.php',
-        success: function(data) {
-        document.getElementById("datos_buscador").innerHTML = data;
-        }
-        });
-        }
-     //   buscar_ahora();
-    </script>
-
 
 </body>
 </html>
